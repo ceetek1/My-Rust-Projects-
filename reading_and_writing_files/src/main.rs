@@ -12,10 +12,18 @@
 //println!("I don write am abeg 🥳😭");
 
 //}
-use std::io::Read;
+//use std::io::Read;
+//fn main(){
+    //let mut file = std::fs::File::open("my data.txt").expect("failed to open file");
+    //let mut contents = String::new();
+    //file.read_to_string(&mut contents).unwrap();
+    //print!("{}",contents);
+//}
+use std::fs::OpenOptions;
+use std::io::Write;
 fn main(){
-    let mut file = std::fs::File::open("my data.txt").expect("failed to open file");
-    let mut contents = String::new();
-    file.read_to_string(&mut contents).unwrap();
-    print!("{}",contents);
+
+    let mut file = OpenOptions::new().append(true).open("my data.txt").expect("cannot open file");
+    file.write_all("I just dey change am".as_bytes()).expect("write failed");
+    println!("guy i don append am oooo😭");
 }

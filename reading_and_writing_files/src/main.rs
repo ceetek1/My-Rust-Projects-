@@ -19,11 +19,48 @@
     //file.read_to_string(&mut contents).unwrap();
     //print!("{}",contents);
 //}
-use std::fs::OpenOptions;
-use std::io::Write;
-fn main(){
+//use std::fs::OpenOptions;
+//use std::io::Write;
+//fn main(){
 
-    let mut file = OpenOptions::new().append(true).open("my data.txt").expect("cannot open file");
-    file.write_all("I just dey change am".as_bytes()).expect("write failed");
-    println!("guy i don append am oooo😭");
+    //let mut file = OpenOptions::new().append(true).open("my data.txt").expect("cannot open file");
+    //file.write_all("I just dey change am".as_bytes()).expect("write failed");
+   // println!("guy i don append am oooo😭");
+//}
+
+use std::io::Write;
+
+
+fn main(){
+    println!("NIGERIAN BREWERY LTD");
+
+    let larger:Vec<&str> = vec![
+    "33 Export",
+    "Desperados",
+    "Goldberg",
+    "Heineken",
+    "Star"];
+    
+
+    let stout:Vec<&str> = vec![
+    "Legend"
+    ,"Turbo king"
+    ,"Wiliams"];
+
+
+    let non_alcoholic:Vec<&str> = vec![
+    "Maltina",
+    "Amstel Malt",
+    "Malta Gold",
+    "Fayrouz"];
+
+let mut file = std::fs::File::create("DRINKS.txt").expect("failed to open file");
+file.write_all("NIGERIAN BREWERIES DRINKS".as_bytes()).unwrap();
+file.write_all(larger.as_bytes()).unwrap();
+file.write_all(stout.as_bytes()).unwrap();
+file.write_all(non_alcoholic.as_bytes()).unwrap();
+
+   
+
+
 }

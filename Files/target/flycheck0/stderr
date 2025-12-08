@@ -1,0 +1,52 @@
+   0.006841958s  INFO prepare_target{force=false package_id=reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files) target="reading_and_writing_files"}: cargo::core::compiler::fingerprint: fingerprint error for reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files)/Check { test: false }/TargetInner { name: "reading_and_writing_files", doc: true, ..: with_path("/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files/src/main.rs", Edition2024) }
+   0.006870500s  INFO prepare_target{force=false package_id=reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files) target="reading_and_writing_files"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files/target/debug/.fingerprint/reading_and_writing_files-c598c46ec052a7ac/bin-reading_and_writing_files`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.027858542s  INFO prepare_target{force=false package_id=reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files) target="reading_and_writing_files"}: cargo::core::compiler::fingerprint: fingerprint error for reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files)/Check { test: true }/TargetInner { name: "reading_and_writing_files", doc: true, ..: with_path("/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files/src/main.rs", Edition2024) }
+   0.027879458s  INFO prepare_target{force=false package_id=reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files) target="reading_and_writing_files"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files/target/debug/.fingerprint/reading_and_writing_files-18d57d480e147345/test-bin-reading_and_writing_files`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking reading_and_writing_files v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/reading_and_writing_files)
+error: could not compile `reading_and_writing_files` (bin "reading_and_writing_files" test) due to 3 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `reading_and_writing_files` (bin "reading_and_writing_files") due to 3 previous errors

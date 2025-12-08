@@ -14,6 +14,7 @@
 //EG
 
 use std::io::stdin;
+use std::io::Write;
 
 fn what_is_your_name() -> String{
     let mut your_name = String::new();
@@ -42,5 +43,9 @@ fn main(){
     else {
         println!("SORRY YOU ARE NOT ON MY LIST BITCH !!!");
     }
+    let mut file = std::fs::File::create("visitors allowed in.txt").expect("failed to create file");
+    file.write_all(visitors_list.join("\n").as_bytes()).unwrap();
+    println!("file printed to screen"); 
+
     
 }

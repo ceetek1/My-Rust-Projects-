@@ -1,0 +1,31 @@
+   0.006237792s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint: stale: changed "/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/src/main.rs"
+   0.006253542s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint:           (vs) "/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/target/debug/.fingerprint/treehouse-9278476698f17809/dep-bin-treehouse"
+   0.006257833s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1762939220, nanos: 884043216 } < FileTime { seconds: 1763750345, nanos: 9479729 }
+   0.006631500s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint: fingerprint dirty for treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse)/Check { test: false }/TargetInner { name: "treehouse", doc: true, ..: with_path("/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/src/main.rs", Edition2024) }
+   0.006642625s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/target/debug/.fingerprint/treehouse-9278476698f17809/dep-bin-treehouse", reference_mtime: FileTime { seconds: 1762939220, nanos: 884043216 }, stale: "/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/src/main.rs", stale_mtime: FileTime { seconds: 1763750345, nanos: 9479729 } }))
+   0.007533750s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint: fingerprint error for treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse)/Check { test: true }/TargetInner { name: "treehouse", doc: true, ..: with_path("/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/src/main.rs", Edition2024) }
+   0.007541000s  INFO prepare_target{force=false package_id=treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse) target="treehouse"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse/target/debug/.fingerprint/treehouse-8131fcff23b2b08e/test-bin-treehouse`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking treehouse v0.1.0 (/Users/chukwurahcharles/Desktop/Programming tinz/MY RUST PROJECTS/treehouse)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.38s

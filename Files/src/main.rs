@@ -34,7 +34,7 @@ use std::io::Write;
 fn main(){
     println!("NIGERIAN BREWERY LTD");
 
-    let larger:Vec<&str> = vec![
+    let larger = [
     "33 Export",
     "Desperados",
     "Goldberg",
@@ -42,25 +42,24 @@ fn main(){
     "Star"];
     
 
-    let stout:Vec<&str> = vec![
+    let stout= [
     "Legend"
     ,"Turbo king"
     ,"Wiliams"];
 
 
-    let non_alcoholic:Vec<&str> = vec![
+    let non_alcoholic=[
     "Maltina",
     "Amstel Malt",
     "Malta Gold",
     "Fayrouz"];
-
-let mut file = std::fs::File::create("DRINKS.txt").expect("failed to open file");
-file.write_all("NIGERIAN BREWERIES DRINKS".as_bytes()).unwrap();
-file.write_all(larger).unwrap();
-file.write_all(stout).unwrap();
-file.write_all(non_alcoholic).unwrap();
+let mut file = std::fs::File::create("Drinks.txt").expect("create failed");
+file.write_all(larger.join("\n").as_bytes()).expect("write failed");
+file.write_all(stout.join("\n").as_bytes()).expect("write failed");
+file.write_all(non_alcoholic.join("\n").as_bytes()).expect("write failed");
 
    
+
 
 
 }

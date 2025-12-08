@@ -1,1 +1,0 @@
-/Users/chukwurahcharles/Desktop/Programming\ tinz/MY\ RUST\ PROJECTS/reading_and_writing_files/target/debug/reading_and_writing_files: /Users/chukwurahcharles/Desktop/Programming\ tinz/MY\ RUST\ PROJECTS/reading_and_writing_files/src/main.rs

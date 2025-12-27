@@ -9,7 +9,7 @@
 // }
 // fn bush (plank: &mut i32){
 //     *plank =*plank/5;
-//     let wood = *plank/3;//In this code this point was used as a distraction
+//     let _wood = *plank/3;//In this code this point was used as a distraction
 //     println!("The value of plank is :{}",plank);
 // }
 //Parse by reference
@@ -20,13 +20,13 @@
 //NO 2.
 // fn main (){
 //     let mut link :i32 = 25;
-//     sledge(link);
+//     sledge(&mut link);
 //     link = link * 3;
 //     println!("The value of link is:{}",link);
 
 // }
-// fn sledge (mut go_link:i32){
-//     go_link = go_link/5;
+// fn sledge (go_link :&mut i32){
+//     *go_link = *go_link/5;
 //     println!("go_link value is: {}",go_link);
 // }
 //Parse by value
@@ -61,7 +61,7 @@
 
 
 
-//No 4.
+// No 4.
 // fn main(){
 //     let data = ["Ade","Ola","Joye","Adam","Yemi","Sam","Tola"];
 //     pass_me(&data[4..]);   
@@ -87,7 +87,7 @@
 
 //     for magic_key in 20..29{
 
-//         if magic_key<=25{
+//         if magic_key>=25{
 //             continue;
 //         }
 //         println!("Key is {}",magic_key-3);
@@ -107,19 +107,19 @@
 
 
 //NO 6.
-fn main(){
+// fn main(){
 
-    let mut lab =15;
-    let mut class = 50;
-    let mut min =4;
-    let mut max = 7;
+//     let mut lab =15;
+//     let mut class = 50;
+//     let mut min =4;
+//     let mut max = 7;
 
-    while lab < class{
-        lab+=min;
-        class-=max;
-        println!("The value of class = {}",class);
-    }
-}
+//     while lab < class{
+//         lab+=min;
+//         class-=max;
+//         println!("The value of class = {}",class);
+//     }
+// }
 
 
 
@@ -185,7 +185,6 @@ fn main(){
 
 
 
-
 //NO 9.
 // fn main(){
 
@@ -200,4 +199,21 @@ fn main(){
 //         two = game*3;//and rhen this becomes 60 
 //         println!("grass ,gmae and two are {} ,{}, {}",grass , game, two);
 //     }
+// }
+
+
+
+
+
+
+//On this segment the code will acctually hang 
+// fn main(){
+//     let mut temp = 0;
+//     while temp < 100{
+//         temp +=1 ;
+//         if temp == 100{
+//             temp = 1;
+//         }
+//     }
+        
 // }
